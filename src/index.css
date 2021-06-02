@@ -78,10 +78,21 @@ body {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
-  color: #f0f0f0;
+  color: black;
   background-color: inherit;
   /* background-image: none; */
   border: none;
+  outline: none;
+}
+
+/* todo-input input:focus{
+  outline: none;
+  border: none;
+  box-shadow: none;
+} */
+
+.dark-theme .todo-input input{
+  color: white;
 }
 
 .card-todo {

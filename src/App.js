@@ -6,11 +6,26 @@ import iconmoon from './assets/images/icon-moon.svg'
 
 
 function App() {
-  const isDark = false;
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const darko = JSON.parse(localStorage.getItem("darkthemer"));
+    if (darko) {
+      setIsDark(darko)
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('darkthemer', JSON.stringify(isDark));
+  }, [isDark]);
 
   let tog = 'sbody';
   if (isDark) {
     tog += ' dark-theme';
+  }
+
+  function toggleDarktheme() {
+    setIsDark(!isDark);
   }
 
   return (
@@ -19,7 +34,7 @@ function App() {
       <div className="main">
         <div className="heda">
           <h1>Todo</h1>
-          <button>
+          <button onClick={toggleDarktheme}>
             <img src={isDark ? iconsun : iconmoon} alt="icon-sun"></img>
           </button>
         </div>
