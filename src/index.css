@@ -1,13 +1,225 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("./images/bg-desktop-light.jpg");
+  background-repeat: no-repeat;
+  background-color: hsl(0, 0%, 98%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dark-theme {
+  background-image: url("./images/bg-desktop-dark.jpg");
+  background-repeat: no-repeat;
+  background-color: hsl(235, 21%, 11%);
+  color: white;
+}
+
+.main {
+  width: 50vw;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.heda {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid white; */
+}
+
+.heda h1 {
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.heda button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-input {
+  display: flex;
+  margin: 20px 0px 20px 0px;
+  /* border: 1px solid black; */
+  justify-content: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: white;
+}
+
+.todo-input span {
+  width: 30px;
+  height: 25px;
+  border: 1px solid rgb(138, 138, 138);
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 5px 10px 5px 10px;
+}
+
+.dark-theme .todo-input {
+  background-color: hsl(235, 24%, 19%);
+}
+
+.todo-input input {
+  display: block;
+  width: 100%;
+  /* height: 34px; */
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #f0f0f0;
+  background-color: inherit;
+  /* background-image: none; */
+  border: none;
+}
+
+.card-todo {
+  /* border: 1px solid hsl(233, 11%, 84%); */
+  background-color: white;
+  padding: 5px 0px 5px 0px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px hsl(231, 7%, 81%);
+}
+
+.dark-theme .card-todo {
+  background-color: hsl(235, 24%, 19%);
+  box-shadow: 0px 10px 50px hsl(0, 0%, 16%);
+}
+
+.card-content {
+  border: 1px solid hsl(234, 39%, 85%);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: hsl(234, 39%, 85%);
+  cursor: pointer;
+}
+
+.card-content input {
+  margin: 0px 20px 0px 0px;
+}
+
+.card-content div {
+  width: 100%;
+}
+
+.card-content button {
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px 10px 15px;
+}
+
+.todo-footer button {
+  background: transparent;
+  border: none;
+  color: hsl(236, 12%, 51%);
+}
+
+.todo-footer button:hover {
+  color: black;
+}
+
+.dark-theme .todo-footer button:hover {
+  color: white;
+}
+
+.dand {
+  text-align: center;
+  margin: 60px 0px 10px 0px;
+  color: gray;
+}
+
+.cb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 25px;
+  border: 1px solid #d9d9d9;
+  vertical-align: sub;
+  transform: translateY(0%);
+  outline: none;
+  border-radius: 50%;
+}
+
+.dark-theme .cb {
+  background-color: white;
+}
+
+.cb:checked+.togo {
+  text-decoration: line-through;
+  color: #747474;
+  font-weight: 600;
+}
+
+.cb:checked {
+  background: hsl(192, 100%, 67%);
+  border-color: #585858;
+}
+
+.cb:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(./images/icon-check.svg);
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.desktop-filta {
+  /* border: 1px solid black; */
+  margin-top: 40px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: white;
+  text-align: center;
+  display: none;
+}
+
+.desktop-filta button {
+  border: none;
+  background-color: inherit;
+  color: gray;
+}
+
+.dark-theme .desktop-filta {
+  background-color: hsl(235, 24%, 19%);
+}
+
+@media screen and (max-width: 1025px) {
+  .main {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url(./images/bg-mobile-light.jpg);
+    background-size: 100%;
+  }
+  .dark-theme {
+    background-image: url(./images/bg-mobile-dark.jpg);
+  }
+  .main {
+    width: 80vw;
+  }
+  .desktop-filt {
+    display: none;
+  }
+  .desktop-filta {
+    display: block;
+  }
 }
