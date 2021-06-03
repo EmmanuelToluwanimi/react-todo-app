@@ -7,6 +7,18 @@ import iconmoon from './assets/images/icon-moon.svg'
 
 function App() {
   const [isDark, setIsDark] = useState(false);
+  const [Todos, setTodos] = useState([]);
+  // const TodoHandler = useRef();
+
+  function sendTodo(sentTodo) {
+    const newTodo = [...Todos, sentTodo]
+    setTodos(newTodo);
+    console.log(newTodo);
+  }
+
+  function getValue() {
+    
+  }
 
   useEffect(() => {
     const darko = JSON.parse(localStorage.getItem("darkthemer"));
@@ -39,7 +51,7 @@ function App() {
           </button>
         </div>
 
-        <Todoinput />
+        <Todoinput sendTodo={sendTodo}/>
 
         <Listtodos />
 
