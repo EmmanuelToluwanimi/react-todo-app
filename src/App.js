@@ -35,7 +35,6 @@ function App() {
       completed: false
     }]
     setTodos(newTodo);
-    // console.log(newTodo);
   }
 
   useEffect(() => {
