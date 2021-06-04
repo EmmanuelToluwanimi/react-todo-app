@@ -116,8 +116,12 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 15px;
-  color: hsl(234, 39%, 85%);
+  color: #585858;
   cursor: pointer;
+}
+
+.dark-theme .card-content{
+  color: hsl(234, 39%, 85%);
 }
 
 .card-content input {
@@ -132,6 +136,11 @@ body {
   background-color: inherit;
   cursor: pointer;
   border: none;
+  display: none;
+}
+
+.card-content:hover button{
+  display: block;
 }
 
 .todo-footer {
@@ -176,10 +185,18 @@ body {
   background-color: white;
 }
 
+.btn-active{
+  color: blue;
+}
+
 .cb:checked+.togo {
   text-decoration: line-through;
-  color: #747474;
-  font-weight: 600;
+  color: #b6b6b6;
+  /* font-weight: 600; */
+}
+
+.dark-theme .cb:checked+.togo{
+  color: rgb(120, 113, 151);
 }
 
 .cb:checked {
