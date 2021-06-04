@@ -136,7 +136,7 @@ function App() {
           <button style={filterstat === "completed" ? {color:"blue"}: {color:"initial"}} onClick={xc}>Completed</button>
         </div>
 
-        <div className="dand">Drag and drop to reorder list</div>
+        {/* <div className="dand">Drag and drop to reorder list</div> */}
 
         <div className="attribution">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noreferrer" target="_blank">Frontend Mentor</a>.

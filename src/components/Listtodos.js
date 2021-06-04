@@ -2,9 +2,6 @@ import React from 'react';
 import Todoholder from './Todoholder'
 
 export default function Listtodos({ Todos, altTodo, delTodo, toggleCompleted, clearCompleted, filterstat, setFilterstat }) {
-    // function filterHandler(stat) {
-    //     setFilterstat(stat);
-    // }
 
     return (
         <div className="card-todo">

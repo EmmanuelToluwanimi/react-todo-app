@@ -5,7 +5,6 @@ export default function Todoinput({sendTodo}) {
 
     function enterKey(e) {
         if (e.keyCode === 13) {
-            // e.preventDefault();
             TodoClick();
         }
     }
