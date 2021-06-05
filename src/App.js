@@ -104,6 +104,8 @@ function App() {
     setIsDark(!isDark);
   }
 
+  const frontendmentorlink = "https://www.frontendmentor.io?ref=challenge";
+
   return (
     <div className={tog}>
 
@@ -124,7 +126,6 @@ function App() {
           toggleCompleted={toggleCompleted}
           clearCompleted={clearCompleted}
           renderAllTodos={renderAllTodos}
-          altTodo={altTodo}
           filterstat={filterstat}
           setFilterstat={setFilterstat}
         />
@@ -135,11 +136,11 @@ function App() {
           <button style={filterstat === "completed" ? {color:"blue"}: {color:"initial"}} onClick={xc}>Completed</button>
         </div>
 
-        {/* <div className="dand">Drag and drop to reorder list</div> */}
+        <div className="dand">Drag and drop to reorder list</div>
 
         <div className="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noreferrer" target="_blank">Frontend Mentor</a>.
-          Coded by <a href="#">Amusan T. Emmanuel</a>.
+          Challenge by <a href={frontendmentorlink} rel="noreferrer" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="https://github.com/EmmanuelToluwanimi">Amusan T. Emmanuel</a>.
         </div>
 
       </div>
