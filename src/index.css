@@ -257,6 +257,7 @@ body {
   }
   .dark-theme {
     background-image: url(./assets/images/bg-mobile-dark.jpg);
+    background-size: 100%;
   }
   .main {
     width: 80vw;
